@@ -1,0 +1,217 @@
+<html>
+<body>
+
+<button onclick="alert('yes');">click</button>
+<button onclick="alert('Bye'); window.close();">click me too</button><br><br><br>
+
+<script>
+
+var x = new Date();
+
+var y = function(){return 7;}; document.write("Date is : "+x+"   And Returns :"+y());
+
+
+btn1.addEventListener("click", function(event){
+    alert("You clicked "+event.target.id);
+});
+
+//
+
+var a,b;
+function addEvents(){
+	a = document.getElementById('lol');
+	b = document.getElementById('zzz');
+
+	a.addEventListener("click",clickHandler);
+	b.addEventListener("click",clickHandler);
+}
+
+function clickHandler(event){
+	alert("You Clicked : "+event.target.id);
+}
+
+window.addEventListener('load',addEvents);
+
+////
+
+</script> 
+
+<script>
+
+var myVar = "Hello";
+var khan = 1234;
+document.write("<br><br><br><br>");
+document.write(typeof khan+"<br>");
+document.write(khan.constructor);
+
+
+//
+
+document.write("<br>");
+
+function myFun(){
+	return arguments[0]+" |"+arguments[1]+"|"+arguments[2];
+}
+
+var result = myFun(100,false,"hello");
+document.write("Result is : "+result+"<br>");
+
+
+function sum(){
+	var res = 0;
+	for(i=0;i< arguments[i];i++){
+		res = res + arguments[i];
+	}
+	return res;
+}
+
+document.write(sum(10,20,30,40,21)+"<br>");
+
+function lolz(){ 
+audio = new Audio();
+audio.src = "http://www.schillmania.com/projects/soundmanager2/demo/_mp3/rain.mp3";
+audio.play();
+};
+
+document.write("<br><br");
+
+eval("alert('h1 From Eval');");
+
+eval("var a = 50; \
+var b = 30; \
+var c = 10; \
+alert( a + b - c );");
+
+document.write("<br><br><br>");
+
+document.write(isFinite(999999.2222)+"<br>");
+document.write(isFinite(lols));
+document.write("<br><br>");
+
+
+
+
+
+
+</script>
+
+<hr><br>
+<script>
+
+
+var parsee = parseFloat("2.1aaaaaa");
+
+document.write(typeof parsee+"------"+parsee);
+document.write("<br><br>");
+
+var pasrse = parseInt("922xx2az");
+document.write(typeof parsee+"++++++ "+pasrse+"<br>");
+
+var uri = decodeURI('http://www.website.com/na%5Bme%20of%7Bfile%3E.html');
+
+document.write(uri+"<br>");
+
+var aaa = encodeURI('https://google.com/ lol/ yes');
+document.write(aaa.constructor+"----- : "+aaa+"<br>");
+
+
+
+var num = 5.3;
+document.write(Math.ceil(num)+"----- "+Math.floor(num)+"<br>");
+
+
+
+</script>
+<br><hr><h1>REGEX</h1><hr><br>
+
+<script>
+
+var str = 'Joe sells cogs from his cog store';
+var re = /cog/g;
+var result = str.replace(re,'bed');
+document.write(result+"<br>");
+
+var ri = "I want to FigHt";
+var rz = /fight/i;
+var s = ri.replace(rz,'Frnd');
+document.write(s+"<br>");
+
+var z = "pop pop \npop pop";
+var mm = /p$/gm;
+var ys = z.replace(mm,"XXXX");
+document.write(ys+"<br>");
+
+document.write("<p>Here are Regex Methods</p><br>");
+
+var iball = "abc 123";
+var zzzz = /bc 12/;
+var oo = zzzz.test(iball);
+document.write("TEST : "+oo+"<br>");
+
+
+var mia = "My Name is Khan";
+var levis = /khan/i;
+var qq = levis.exec(mia);
+document.write(qq+"<br>");
+
+
+
+
+
+
+
+
+</script><hr><br>Strings<hr><br>
+
+<script>
+
+
+var str1 = "Programmming is a Fun , And I Love to Code !";
+var st2 = " HAcked thw Wrld";
+
+document.write(str1.length+"<br>");
+document.write(str1.charAt(2)+"<br>");
+document.write("Test  ".concat(str1,st2)+"<br>");
+resz = /love/gi;
+ppap = resz.exec(str1);
+document.write(ppap+"<br>");
+
+if(str1.search(resz) > -1){
+	document.write("Love is Foudn!");
+}else{
+	document.write("FAILED ");
+}
+
+document.write("<br><br>");
+
+var zx = str1.split('Love');
+document.write(zx);
+
+var pp = str1.slice(0,11);
+document.write("<br>"+pp+"<br>");
+
+
+
+
+
+
+
+</script>
+
+<br><br><br>
+<button id="btn1">Button 1</button>
+<br><br>
+
+<button id="lol">lol</button>
+<button id="zzz">zzz</button>
+
+<br><br>
+
+<button onclick="history.forward()">forward</button><br>
+
+<button id="addd" onclick="lolz()">Play Audio</button>
+
+
+
+</body>
+</html>
